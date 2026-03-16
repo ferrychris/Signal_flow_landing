@@ -1,4 +1,7 @@
 .DS_Store
 *.swp
+temp_auto_push.bat
 *.swo
 node_modules/
+.gitignore
+branch_structure.json

@@ -45,6 +45,7 @@ This is not a pixel-perfection test. We're evaluating:
 - **Design judgment** - Can you identify what's wrong with AI output and fix it with real taste?
 - **Brand application** - Can you take a brand guide and apply it with intention, not just copy hex codes?
 - **Figma craft** - Are your files organized, componentized, and production-ready?
+- **Design system fluency** - In practice, you'll be working within existing client Figma component libraries with established tokens, styles, and patterns. Your Figma file should demonstrate that you know how to build within constraints, not just from scratch. Show us componentization, design tokens, and structure that could slot into an existing system
 - **Code quality** - Does your HTML/CSS reflect your design accurately? Is it clean, semantic, responsive?
 - **Strategic thinking** - Does your rationale show you understand conversion, not just aesthetics?
 
@@ -76,8 +77,6 @@ Include your Figma link in the PR description where the template indicates.
 
 ## About the Role
 
-This is a freelance retainer role (~$3,000-5,000/mo). You'll work in Figma for traditional design deliverables and push production-ready code via git. Over time, you'll contribute reusable design components and templates to our internal tooling library that feeds back into the agent system.
-
-This is not a role where your workflow ends at a Figma export.
+This is a freelance retainer role (~$1,500/mo base retainer + hourly for overflow). You'll work in Figma for traditional design deliverables - often taking AI-generated wireframes and creating high-fidelity designs using established client brand guidelines, Figma components, and design tokens. Over time, you'll contribute reusable design components and templates to our internal tooling library that feeds back into the agent system.
 
 Learn more about FunnelEnvy: [funnelenvy.com](https://funnelenvy.com)
