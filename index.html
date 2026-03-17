@@ -523,11 +523,9 @@
     .footer-links a { color: #94A3B8; transition: color 0.2s; }
     .footer-links a:hover { color: #fff; }
 
-    /* ─── SCROLL ANIMATIONS ─── */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    /* ─── SCROLL ANIMATIONS (Motion library handles all transitions) ─── */
+    .reveal { opacity: 1; transform: none; }
     .reveal.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
 
     @media (max-width: 1024px) {
       .hero-inner, .problem-inner, .sp-inner { grid-template-columns: 1fr; }
@@ -1118,10 +1116,9 @@
     /* ─── 4. OVERLAP FLIP CARDS — stagger spring in ─── */
     const flipCards = document.querySelectorAll('.flip-card');
     if (flipCards.length) {
-      animate(flipCards, { opacity: 0, y: 32, scale: 0.96 }, { duration: 0 });
       inView('.features-overlap', () => {
         animate(flipCards,
-          { opacity: 1, y: 0, scale: 1 },
+          { opacity: [0,1], y: [32,0], scale: [0.96,1] },
           { delay: stagger(0.08), ...SPRING_GENTLE }
         );
       }, { margin: '0px' });
@@ -1130,10 +1127,9 @@
     /* ─── 5. FEATURE GRID FLIP CARDS — stagger spring in ─── */
     const flipCardsSm = document.querySelectorAll('.flip-card-sm');
     if (flipCardsSm.length) {
-      animate(flipCardsSm, { opacity: 0, y: 24, scale: 0.97 }, { duration: 0 });
       inView('.feature-grid', () => {
         animate(flipCardsSm,
-          { opacity: 1, y: 0, scale: 1 },
+          { opacity: [0,1], y: [24,0], scale: [0.97,1] },
           { delay: stagger(0.055), ...SPRING_GENTLE }
         );
       }, { margin: '0px' });
@@ -1141,27 +1137,24 @@
 
     /* ─── 6. SECTION HEADINGS & TEXT BLOCKS ─── */
     document.querySelectorAll('.features-head, .sp-inner > div:first-child, .cta-inner').forEach(el => {
-      animate(el, { opacity: 0, y: 20 }, { duration: 0 });
       inView(el, () => {
-        animate(el, { opacity: 1, y: 0 }, { duration: 0.65, easing: EASE_OUT });
+        animate(el, { opacity: [0,1], y: [20,0] }, { duration: 0.65, easing: EASE_OUT });
       }, { margin: '0px' });
     });
 
     /* ─── 7. SECTION LABEL SLIDE-IN FROM LEFT ─── */
     document.querySelectorAll('.section-label, .section-label-light').forEach(el => {
-      animate(el, { opacity: 0, x: -16 }, { duration: 0 });
       inView(el, () => {
-        animate(el, { opacity: 1, x: 0 }, { duration: 0.45, easing: EASE_OUT });
+        animate(el, { opacity: [0,1], x: [-16,0] }, { duration: 0.45, easing: EASE_OUT });
       }, { margin: '0px' });
     });
 
     /* ─── 8. STAT BOXES — spring pop in ─── */
     const statBoxes = document.querySelectorAll('.stat-box');
     if (statBoxes.length) {
-      animate(statBoxes, { opacity: 0, y: 20, scale: 0.92 }, { duration: 0 });
       inView('.stats-grid', () => {
         animate(statBoxes,
-          { opacity: 1, y: 0, scale: 1 },
+          { opacity: [0,1], y: [20,0], scale: [0.92,1] },
           { delay: stagger(0.1), ...SPRING_SNAPPY }
         );
       }, { margin: '0px' });
@@ -1170,10 +1163,9 @@
     /* ─── 9. TESTIMONIAL CARD — slide up ─── */
     const testimonial = document.querySelector('.testimonial-card-sp');
     if (testimonial) {
-      animate(testimonial, { opacity: 0, y: 30 }, { duration: 0 });
       inView(testimonial, () => {
         animate(testimonial,
-          { opacity: 1, y: 0 },
+          { opacity: [0,1], y: [30,0] },
           { duration: 0.7, easing: EASE_OUT }
         );
       }, { margin: '0px' });
@@ -1182,10 +1174,9 @@
     /* ─── 10. PAIN ITEMS — stagger left ─── */
     const painItems = document.querySelectorAll('.pain-item');
     if (painItems.length) {
-      animate(painItems, { opacity: 0, x: -20 }, { duration: 0 });
       inView('.pain-list', () => {
         animate(painItems,
-          { opacity: 1, x: 0 },
+          { opacity: [0,1], x: [-20,0] },
           { delay: stagger(0.12), duration: 0.55, easing: EASE_OUT }
         );
       }, { margin: '-5% 0px' });
