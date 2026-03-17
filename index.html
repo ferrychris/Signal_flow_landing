@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signalflow – Accelerate Revenue. Uncover Every Signal.</title>
+  <meta name="description" content="The enterprise CRM intelligence platform to forecast with precision and close deals faster.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* New Dark Theme for Hero */
+      --bg-deep: #0B1120;
+      --bg-card: #151F32;
+      --accent: #3B82F6;
+      --accent-hover: #2563EB;
+      --accent-glow: rgba(59, 130, 246, 0.5);
+      --warm: #F59E0B;
+      --warm-glow: rgba(245, 158, 11, 0.4);
+      --text-primary: #FFFFFF;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-light: rgba(255, 255, 255, 0.1);
+      
+      /* Standard Theme for Lower Sections */
+      --primary: #1B2B4B;
+      --primary-deep: #0D1B30;
+      --surface: #F8FAFC;
+      --surface-alt: #FFFFFF;
+      --border: #E2E8F0;
+      --text-dark: #1E293B;
+      --text-dark-secondary: #64748B;
+      
+      --sp-xs: 8px;
+      --sp-sm: 16px;
+      --sp-md: 24px;
+      --sp-lg: 32px;
+      --sp-xl: 48px;
+      --sp-2xl: 64px;
+      --sp-3xl: 96px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+    img, svg { max-width: 100%; display: block; }
+    
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 var(--sp-md); }
+    .container-sm { max-width: 1120px; margin: 0 auto; padding: 0 var(--sp-md); }
+
+    .section-label {
+      display: inline-flex; align-items: center; gap: var(--sp-xs);
+      font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: var(--sp-sm);
+    }
+    .section-label-light { color: #fff; opacity: 0.6; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 100;
+      padding: var(--sp-md) 0;
+    }
+    .nav-inner {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 24px; font-weight: 700; color: #fff; letter-spacing: -0.02em;
+    }
+    .logo-icon {
+      display: flex; align-items: center; gap: 4px; height: 24px;
+    }
+    .logo-icon span {
+      display: block; width: 4px; border-radius: 2px;
+      background: var(--accent);
+    }
+    .logo-icon span:nth-child(1) { height: 14px; opacity: 0.6; }
+    .logo-icon span:nth-child(2) { height: 24px; }
+    .logo-icon span:nth-child(3) { height: 18px; opacity: 0.8; }
+    .logo-icon span:nth-child(4) { height: 10px; opacity: 0.4; }
+
+    .nav-actions { display: flex; align-items: center; gap: var(--sp-sm); }
+    .btn-ghost {
+      color: var(--text-secondary); padding: 8px 16px;
+      font-size: 14px; font-weight: 500; border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.2s;
+    }
+    .btn-ghost:hover {
+      color: #fff; border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.05);
+    }
+    .btn-primary {
+      background: var(--warm); color: #1a1000;
+      padding: 9px 18px; border-radius: 8px;
+      font-size: 13px; font-weight: 600;
+      display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 4px 14px var(--warm-glow);
+      transition: all 0.2s ease;
+      position: relative; overflow: hidden;
+      border: none; cursor: pointer;
+    }
+    .btn-primary:after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+      background: #FBBF24;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative; padding: 140px 0 180px;
+      background: radial-gradient(circle at 70% 50%, rgba(27, 43, 75, 0.6) 0%, var(--bg-deep) 60%);
+      min-height: 800px; overflow: hidden;
+    }
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-xl);
+      align-items: center; position: relative; z-index: 10;
+    }
+    .hero-content { max-width: 580px; }
+    .hero h1 {
+      font-size: clamp(40px, 5vw, 64px); line-height: 1.1; font-weight: 700;
+      letter-spacing: -0.03em; margin-bottom: var(--sp-md);
+      color: #fff;
+    }
+    .hero-sub {
+      font-size: 18px; color: var(--text-secondary); line-height: 1.6;
+      margin-bottom: var(--sp-xl); max-width: 480px;
+    }
+    .hero .btn-primary {
+      padding: 11px 22px; font-size: 14px; margin-bottom: var(--sp-2xl);
+    }
+    
+    .trust-block { margin-top: var(--sp-lg); }
+    .trust-label {
+      color: var(--text-secondary); font-size: 14px; font-weight: 500;
+      margin-bottom: var(--sp-md); display: block;
+    }
+    .trust-logos {
+      display: flex; gap: var(--sp-xl); align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─── HERO VISUAL (NODE GRAPH) ─── */
+    .hero-visual {
+      position: absolute; top: 120px; right: -50px; bottom: 0; width: 60%;
+      z-index: 0; pointer-events: none;
+    }
+    .hero-visual::after {
+      content:''; position: absolute; inset: 0;
+      background: radial-gradient(circle at center, transparent 30%, var(--bg-deep) 70%);
+    }
+    
+    .graph-svg {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
+    }
+    .path-blue { stroke: rgba(59,130,246,0.3); stroke-width: 2px; fill: none; }
+    .path-gold { stroke: rgba(245,158,11,0.3); stroke-width: 2px; fill: none; }
+    .path-glow { filter: drop-shadow(0 0 6px var(--accent-glow)); stroke: rgba(59,130,246,0.8); }
+    
+    .node-group { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 8px; z-index: 2; }
+    
+    .node {
+      width: 16px; height: 16px; border-radius: 50%;
+      background: var(--accent); position: relative;
+      box-shadow: 0 0 0 4px rgba(59,130,246,0.2), 0 0 20px var(--accent-glow);
+    }
+    .node::before {
+      content: ''; position: absolute; inset: -14px;
+      border: 1px solid rgba(59,130,246,0.3); border-radius: 50%;
+    }
+    .node::after {
+      content: ''; position: absolute; inset: -28px;
+      border: 1px dashed rgba(59,130,246,0.15); border-radius: 50%;
+      animation: rotate 20s linear infinite;
+    }
+    
+    .node.gold {
+      background: var(--warm);
+      box-shadow: 0 0 0 4px rgba(245,158,11,0.2), 0 0 20px var(--warm-glow);
+    }
+    .node.gold::before { border-color: rgba(245,158,11,0.3); }
+    .node.gold::after { border-color: rgba(245,158,11,0.15); }
+
+    .node.large { width: 24px; height: 24px; }
+    .node.large::before { inset: -18px; }
+    .node.large::after { inset: -36px; }
+
+    .node-label {
+      background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 12px; border-radius: 8px; backdrop-filter: blur(4px);
+      text-align: center; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .node-title { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+    .node-subtitle { font-size: 11px; color: var(--text-secondary); }
+
+    /* Node Positions */
+    .n1 { top: 18%; left: 25%; } /* New Opp */
+    .n2 { top: 48%; left: 15%; } /* Bottom New Opp */
+    .n3 { top: 36%; left: 35%; } /* Discovery */
+    .n4 { top: 20%; left: 50%; } /* Proposal */
+    .n5 { top: 34%; left: 55%; } /* Center Node */
+    .n6 { top: 53%; left: 45%; } /* Bottom mid */
+    .n7 { top: 48%; left: 75%; } /* Negotiation */
+    .n8 { top: 23%; left: 90%; } /* Closed Won */
+    .n9 { top: 10%; left: 80%; } /* Top right */
+
+    @keyframes rotate    { 100% { transform: rotate(360deg); } }
+    @keyframes nodePulse { 0%,100% { box-shadow: 0 0 0 4px rgba(59,130,246,0.2), 0 0 20px rgba(59,130,246,0.5); } 50% { box-shadow: 0 0 0 8px rgba(59,130,246,0.08), 0 0 36px rgba(59,130,246,0.8); } }
+    @keyframes nodePulseGold { 0%,100% { box-shadow: 0 0 0 4px rgba(245,158,11,0.2), 0 0 20px rgba(245,158,11,0.4); } 50% { box-shadow: 0 0 0 8px rgba(245,158,11,0.08), 0 0 36px rgba(245,158,11,0.7); } }
+    @keyframes floatA   { 0%,100% { transform: translate(-50%,-50%) translateY(0px); }   50% { transform: translate(-50%,-50%) translateY(-6px); } }
+    @keyframes floatB   { 0%,100% { transform: translate(-50%,-50%) translateY(0px); }   50% { transform: translate(-50%,-50%) translateY(-4px); } }
+    @keyframes floatC   { 0%,100% { transform: translate(-50%,-50%) translateY(-3px); }  50% { transform: translate(-50%,-50%) translateY(4px); } }
+    @keyframes labelGlow { 0%,100% { opacity: 0.85; } 50% { opacity: 1; } }
+    @keyframes pathPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+
+    .node            { animation: nodePulse 3s ease-in-out infinite; }
+    .node.gold       { animation: nodePulseGold 2.8s ease-in-out infinite; }
+    .node-label      { animation: labelGlow 4s ease-in-out infinite; }
+
+    .n1 { animation: floatA 5s ease-in-out infinite; }
+    .n2 { animation: floatB 6s ease-in-out infinite; }
+    .n3 { animation: floatC 4.5s ease-in-out infinite; }
+    .n4 { animation: floatA 5.5s ease-in-out infinite 0.4s; }
+    .n5 { animation: floatB 4.8s ease-in-out infinite 0.8s; }
+    .n6 { animation: floatC 5.2s ease-in-out infinite 0.2s; }
+    .n7 { animation: floatA 4.6s ease-in-out infinite 1s; }
+    .n8 { animation: floatB 5.8s ease-in-out infinite 0.6s; }
+    .n9 { animation: floatC 5s ease-in-out infinite 1.2s; }
+
+    .path-glow       { animation: pathPulse 3s ease-in-out infinite; }
+
+    /* ─── OVERLAPPING FEATURE CARDS ─── */
+    .cards-section {
+      background: var(--bg-deep);
+      position: relative; z-index: 20;
+      padding: 0 0 var(--sp-2xl);
+      margin-top: 0;
+    }
+    .features-overlap {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 0;
+    }
+
+    /* ── Flip Card ── */
+    .flip-card {
+      perspective: 900px;
+      height: 180px;
+    }
+    .flip-inner {
+      position: relative; width: 100%; height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .flip-card:hover .flip-inner { transform: rotateY(180deg); }
+
+    .flip-front, .flip-back {
+      position: absolute; inset: 0;
+      border-radius: 14px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      padding: 20px;
+      display: flex; flex-direction: column; justify-content: flex-start;
+    }
+    .flip-front {
+      background: linear-gradient(160deg, rgba(22, 33, 55, 0.95) 0%, rgba(11, 17, 32, 0.98) 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    }
+    .flip-back {
+      background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #FBBF24 100%);
+      border: 1px solid rgba(255,255,255,0.2);
+      transform: rotateY(180deg);
+      justify-content: center;
+      box-shadow: 0 12px 28px rgba(245, 158, 11, 0.4);
+    }
+
+    /* Front face */
+    .fc-icon {
+      width: 36px; height: 36px; border-radius: 9px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 12px; flex-shrink: 0;
+    }
+    .fc-icon svg { width: 18px; height: 18px; }
+    .ic-primary { stroke: var(--accent); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+    .ic-accent { stroke: var(--warm); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+    .flip-front h3 {
+      font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .flip-front p {
+      font-size: 12px; color: var(--text-secondary); line-height: 1.55;
+    }
+
+    /* Back face */
+    .flip-back h3 {
+      font-size: 15px; font-weight: 700; color: #1a1000; margin-bottom: 10px;
+    }
+    .flip-back ul {
+      list-style: none; display: flex; flex-direction: column; gap: 7px;
+    }
+    .flip-back ul li {
+      font-size: 12px; font-weight: 500; color: rgba(0,0,0,0.75);
+      display: flex; align-items: flex-start; gap: 6px;
+    }
+    .flip-back ul li::before {
+      content: '✦'; font-size: 8px; color: rgba(0,0,0,0.45);
+      margin-top: 3px; flex-shrink: 0;
+    }
+
+    /* ─── LIGHT SECTION WRAPPER ─── */
+    .light-section-wrap {
+      background: var(--surface);
+      margin-top: -60px; padding-top: 120px;
+      position: relative; z-index: 10;
+      color: var(--text-dark);
+    }
+    section[id] { scroll-margin-top: 64px; }
+
+    /* ─── BUTTONS (Light Background) ─── */
+    .btn-light {
+      display:inline-flex; align-items:center; gap:var(--sp-xs);
+      background:#fff; color:var(--primary);
+      padding:12px 24px; border-radius:8px; font-weight:600; font-size:16px;
+      border:none; cursor:pointer; transition:transform .15s, box-shadow .2s;
+      min-width:160px; justify-content:center;
+    }
+    .btn-light:hover { transform:translateY(-1px); box-shadow:0 8px 24px rgba(0,0,0,.15); }
+    .btn-outline-light {
+      display:inline-flex; align-items:center; gap:var(--sp-xs);
+      background:transparent; color:#fff;
+      padding:12px 24px; border-radius:8px; font-weight:600; font-size:16px;
+      border:1px solid rgba(255,255,255,.35); cursor:pointer; transition:border-color .2s, background .2s;
+      min-width:160px; justify-content:center;
+    }
+    .btn-outline-light:hover { border-color:#fff; background:rgba(255,255,255,.08); }
+
+    /* ─── PROBLEM ─── */
+    .problem { padding: var(--sp-2xl) 0; }
+    .problem-inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-xl); align-items: center; }
+    .problem h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: var(--primary); line-height: 1.25; margin-bottom: var(--sp-sm); letter-spacing: -0.02em; }
+    .problem p { color: var(--text-dark-secondary); font-size: 14px; line-height: 1.65; margin-bottom: var(--sp-sm); }
+
+    .pain-list { display: flex; flex-direction: column; gap: 10px; }
+    .pain-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: #fff; border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 16px; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pain-item:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .pain-icon {
+      width: 34px; height: 34px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      background: rgba(239, 68, 68, 0.1);
+    }
+    .pain-icon svg { width: 16px; height: 16px; stroke: #F87171; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .pain-item h4 { font-size: 13px; font-weight: 600; color: var(--primary); margin-bottom: 3px; }
+    .pain-item p { font-size: 12px; color: var(--text-dark-secondary); line-height: 1.55; margin: 0; }
+
+    /* ─── FEATURES ─── */
+    .features { padding: var(--sp-3xl) 0; background: var(--bg-deep); border-top: 1px solid rgba(255,255,255,0.05); }
+    .features-head { text-align: center; margin-bottom: var(--sp-2xl); }
+    .features-head .section-label { color: var(--accent); }
+    .features-head h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: #fff; margin-bottom: var(--sp-sm); line-height: 1.25; letter-spacing: -0.02em; }
+    .features-head p { color: var(--text-secondary); font-size: 18px; max-width: 600px; margin: 0 auto; }
+    
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+    /* Compact flip variant for feature grid */
+    .flip-card-sm {
+      perspective: 900px;
+      height: 148px;
+    }
+    .flip-card-sm .flip-inner {
+      position: relative; width: 100%; height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .flip-card-sm:hover .flip-inner { transform: rotateY(180deg); }
+    .flip-card-sm .flip-front,
+    .flip-card-sm .flip-back {
+      position: absolute; inset: 0; border-radius: 12px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      padding: 16px;
+      display: flex; flex-direction: column; justify-content: flex-start;
+    }
+    .flip-card-sm .flip-front {
+      background: linear-gradient(160deg, rgba(22, 33, 55, 0.85) 0%, rgba(11, 17, 32, 0.95) 100%);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .flip-card-sm .flip-back {
+      background: linear-gradient(135deg, #D97706 0%, #F59E0B 60%, #FCD34D 100%);
+      border: 1px solid rgba(255,255,255,0.2);
+      transform: rotateY(180deg);
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+    }
+    .flip-card-sm .flip-front .fc-sm-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.22);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 10px; flex-shrink: 0;
+    }
+    .flip-card-sm .flip-front .fc-sm-icon svg { width: 16px; height: 16px; }
+    .flip-card-sm .flip-front h3 { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 5px; letter-spacing: -0.01em; }
+    .flip-card-sm .flip-front p  { font-size: 11.5px; color: var(--text-secondary); line-height: 1.5; }
+    .flip-card-sm .flip-back h3  { font-size: 13px; font-weight: 700; color: #1a1000; margin-bottom: 8px; }
+    .flip-card-sm .flip-back ul  { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .flip-card-sm .flip-back ul li { font-size: 11px; font-weight: 500; color: rgba(0,0,0,0.72); display: flex; align-items: flex-start; gap: 5px; }
+    .flip-card-sm .flip-back ul li::before { content: '✦'; font-size: 7px; color: rgba(0,0,0,0.4); margin-top: 3px; flex-shrink: 0; }
+    .feature-card-sub {
+      background: rgba(22, 33, 55, 0.7); border: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: var(--sp-lg);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .feature-card-sub:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.35); border-color: rgba(59,130,246,0.3); }
+    .sub-icon {
+      width: 44px; height: 44px; border-radius: 10px; background: rgba(59,130,246,0.1);
+      border: 1px solid rgba(59,130,246,0.2);
+      display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-sm);
+    }
+    .sub-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .feature-card-sub h3 { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .feature-card-sub p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* ─── SOCIAL PROOF ─── */
+    .social-proof { background: #fff; padding: 72px 0; color: var(--text-dark); border-top: 1px solid var(--border); }
+    .sp-inner { display: grid; grid-template-columns: 1fr 2fr; gap: var(--sp-xl); align-items: center; }
+    .sp-left h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: var(--primary); line-height: 1.2; margin-bottom: var(--sp-sm); letter-spacing: -0.02em; }
+    .sp-left p { color: var(--text-dark-secondary); font-size: 14px; line-height: 1.65; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+    .stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
+    .stat-num { font-size: 34px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 4px; letter-spacing: -0.03em; }
+    .stat-lbl { font-size: 12px; color: var(--text-dark-secondary); }
+
+    .testimonial-card-sp {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: var(--sp-md); position: relative;
+    }
+    .testimonial-card-sp blockquote { color: var(--text-dark); font-size: 14px; line-height: 1.65; font-style: italic; margin-bottom: var(--sp-sm); font-weight: 500; }
+    .testimonial-card-sp blockquote::before { content: '\201C'; font-size: 36px; color: var(--accent); line-height: 0; vertical-align: -0.4em; margin-right: 6px; font-family: serif; }
+    .t-author { display: flex; align-items: center; gap: 12px; }
+    .t-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 12px; }
+    .t-name { color: var(--text-dark); font-size: 13px; font-weight: 600; }
+    .t-role { color: var(--text-dark-secondary); font-size: 12px; }
+
+    /* ─── FINAL CTA ─── */
+    .final-cta {
+      background: var(--bg-deep);
+      padding: 72px 0;
+      position: relative; overflow: hidden; color: #fff;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .final-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 120% at 50% 100%, rgba(59,130,246,0.12) 0%, transparent 60%);
+    }
+    .cta-inner { text-align: center; position: relative; z-index: 10; max-width: 580px; margin: 0 auto; }
+    .cta-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25);
+      border-radius: 20px; padding: 5px 12px;
+      font-size: 11px; font-weight: 600; color: var(--accent);
+      letter-spacing: .06em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .cta-tag svg { width: 12px; height: 12px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .cta-inner h2 { font-size: clamp(26px, 4vw, 36px); font-weight: 700; line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.025em; }
+    .cta-inner > p { color: #94A3B8; font-size: 16px; line-height: 1.6; margin-bottom: 28px; }
+    .cta-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+    .btn-cta-orange {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: linear-gradient(135deg, #D97706, #F59E0B);
+      color: #1a1000;
+      padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 15px;
+      border: none; cursor: pointer;
+      box-shadow: 0 4px 18px rgba(245,158,11,0.45);
+      transition: transform .15s, box-shadow .2s;
+      letter-spacing: -0.01em;
+    }
+    .btn-cta-orange:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(245,158,11,0.6); }
+    .btn-outline-light {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; color: #fff;
+      padding: 11px 22px; border-radius: 8px; font-weight: 600; font-size: 14px;
+      border: 1px solid rgba(255,255,255,0.2); cursor: pointer;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline-light:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.06); }
+    .trust-chips { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .trust-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px; padding: 5px 10px;
+      font-size: 11px; color: #64748B; font-weight: 500;
+    }
+    .trust-chip svg { width: 11px; height: 11px; stroke: #64748B; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--bg-deep); padding: var(--sp-xl) 0; border-top: 1px solid rgba(255,255,255,0.06); color: #94A3B8; font-size: 14px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--sp-md); }
+    .footer-logo { font-size: 18px; font-weight: 700; color: #fff; }
+    .footer-links { display: flex; gap: var(--sp-lg); }
+    .footer-links a { color: #94A3B8; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+
+    @media (max-width: 1024px) {
+      .hero-inner, .problem-inner, .sp-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .hero { padding: 120px 0; min-height: auto; }
+      .features-overlap { grid-template-columns: 1fr; margin-top: -60px; padding: 0 var(--sp-md); }
+      .light-section-wrap { margin-top: 0; padding-top: var(--sp-xl); }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .nav-actions { display: none; }
+    }
+
+    /* ─── DEMO MODAL ─── */
+    .modal-backdrop {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(5, 10, 20, 0.75); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      background: #111827; border: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px; padding: 36px 32px; width: 100%; max-width: 440px;
+      position: relative; box-shadow: 0 32px 64px rgba(0,0,0,0.6);
+      animation: modalIn 0.25s cubic-bezier(0.16,1,0.3,1);
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(16px) scale(0.97); }
+      to   { opacity: 1; transform: none; }
+    }
+    .modal-close {
+      position: absolute; top: 14px; right: 16px;
+      background: none; border: none; cursor: pointer;
+      color: #64748B; font-size: 20px; line-height: 1;
+      transition: color 0.15s;
+    }
+    .modal-close:hover { color: #fff; }
+    .modal h2 { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; letter-spacing: -0.02em; }
+    .modal .modal-sub { font-size: 13px; color: #64748B; margin-bottom: 24px; }
+    .modal-field { margin-bottom: 14px; }
+    .modal-field label { display: block; font-size: 12px; font-weight: 600; color: #94A3B8; margin-bottom: 6px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .modal-field input, .modal-field select {
+      width: 100%; background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+      padding: 10px 14px; font-size: 14px; color: #fff; font-family: inherit;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .modal-field input::placeholder { color: #475569; }
+    .modal-field input:focus, .modal-field select:focus { border-color: rgba(59,130,246,0.6); }
+    .modal-field select option { background: #1e293b; color: #fff; }
+    .modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .modal-submit {
+      width: 100%; margin-top: 20px;
+      background: var(--warm); color: #1a1000;
+      padding: 12px; border-radius: 8px; border: none; cursor: pointer;
+      font-size: 15px; font-weight: 700; font-family: inherit;
+      box-shadow: 0 4px 16px rgba(245,158,11,0.4);
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+    .modal-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(245,158,11,0.55); }
+    .modal-success { display: none; text-align: center; padding: 12px 0; }
+    .modal-success .success-icon {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .modal-success .success-icon svg { width: 24px; height: 24px; stroke: #4ade80; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .modal-success h3 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .modal-success p { font-size: 13px; color: #64748B; line-height: 1.6; }
+    .modal-success .success-note { margin-top: 16px; font-size: 11px; color: #334155; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- ━━━ NAV ━━━ -->
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        Signalflow
+      </div>
+      <div class="nav-actions">
+        <a href="#" class="btn-primary" onclick="openModal();return false;">Request Demo ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ━━━ HERO ━━━ -->
+  <section class="hero">
+    <div class="hero-visual">
+      <!-- Network Graph -->
+      <svg class="graph-svg" preserveAspectRatio="none" viewBox="0 0 1000 600">
+        <path class="path-blue path-glow" d="M 250 300 C 350 300, 350 240, 450 260" />
+        <path class="path-gold" d="M 250 300 C 300 400, 400 450, 500 400" />
+        <path class="path-blue" d="M 150 400 C 200 350, 200 350, 250 300" />
+        <path class="path-blue path-glow" d="M 450 260 C 500 200, 500 200, 550 180" />
+        <path class="path-gold" d="M 450 260 C 500 320, 600 380, 700 350" />
+        <path class="path-blue" d="M 500 400 C 600 450, 650 400, 700 350" />
+        <path class="path-blue path-glow" d="M 700 350 C 750 250, 850 250, 900 220" />
+        <path class="path-gold" d="M 550 180 C 700 150, 800 250, 900 220" />
+      </svg>
+      <div class="node-group n1">
+        <div class="node"></div>
+        <div class="node-label" style="position:absolute; bottom:34px; left:-60px;"><div class="node-title">New Opportunity</div></div>
+      </div>
+      <div class="node-group n2">
+        <div class="node large"></div>
+        <div class="node-label" style="margin-top:6px;"><div class="node-title">New Opportunity</div><div class="node-subtitle">Score: 62/100</div></div>
+      </div>
+      <div class="node-group n3">
+        <div class="node"></div>
+        <div class="node-label" style="position:absolute; bottom:30px; left:-40px;"><div class="node-title">Discovery</div><div class="node-subtitle">Pipeline: $1.2M</div></div>
+      </div>
+      <div class="node-group n4">
+        <div class="node gold"></div>
+      </div>
+      <div class="node-group n5">
+        <div class="node gold large"></div>
+        <div class="node-label" style="position:absolute; bottom:32px; left:-30px;"><div class="node-title">Proposal</div><div class="node-subtitle">Score: 83/100</div></div>
+      </div>
+      <div class="node-group n6">
+        <div class="node gold"></div>
+      </div>
+      <div class="node-group n7">
+        <div class="node"></div>
+        <div class="node-label" style="margin-top:24px;"><div class="node-title">Negotiation</div><div class="node-subtitle">Pipeline: $1.2M</div></div>
+      </div>
+      <div class="node-group n8">
+        <div class="node gold large"></div>
+        <div class="node-label" style="position:absolute; bottom:34px; left:-30px;"><div class="node-title">Closed Won</div><div class="node-subtitle">Score: 92/100</div></div>
+      </div>
+      <div class="node-group n9">
+        <div class="node gold"></div>
+      </div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="reveal">Accelerate Revenue.<br>Uncover Every Signal.</h1>
+        <p class="hero-sub reveal reveal-delay-1">For VPs of Sales and RevOps. The enterprise CRM intelligence platform to forecast with precision and close deals faster.</p>
+        <div class="reveal reveal-delay-2">
+          <button class="btn-primary" onclick="openModal()">Request Demo ↗</button>
+        </div>
+        
+        <div class="trust-block reveal reveal-delay-2">
+          <span class="trust-label">Trusted by industry leaders</span>
+          <div class="trust-logos">
+            <svg viewBox="0 0 100 30" width="100"><path d="M25,15 c0-5,7-6,10-2 c2-8,15-8,17,0 c4-2,10,0,10,6 c2,0,5,3,5,6 c0,4-4,5-7,5 H22 c-4,0-7-2-7-5 C15,17,19,15,25,15 z" fill="#fff"/><text x="25" y="20" fill="#fff" font-size="12" font-weight="700">salesforce</text></svg>
+            <svg viewBox="0 0 100 30" width="90"><path d="M15,15 L28,10 M15,15 L28,20" stroke="#fff" stroke-width="2"/><circle cx="15" cy="15" r="4" fill="#fff"/><circle cx="28" cy="10" r="3" fill="#fff"/><circle cx="28" cy="20" r="3" fill="#fff"/><text x="35" y="20" fill="#fff" font-size="13" font-weight="700">HubSpot</text></svg>
+            <svg viewBox="0 0 100 30" width="100"><path d="M15,5 L15,25 M5,10 L25,20 M5,20 L25,10" stroke="#fff" stroke-width="2"/><text x="32" y="20" fill="#fff" font-size="13" font-weight="600">snowflake</text></svg>
+            <svg viewBox="0 0 100 30" width="90"><rect x="10" y="8" width="16" height="14" rx="2" fill="#fff"/><rect x="8" y="10" width="4" height="4" fill="#fff"/><text x="32" y="20" fill="#fff" font-size="13" font-weight="700">DATADOG</text></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━ OVERLAPPING FEATURE CARDS ━━━ -->
+  <div class="cards-section">
+    <div class="container">
+      <div class="features-overlap">
+
+        <!-- Card 1: AI Forecasting -->
+        <div class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">
+                <svg viewBox="0 0 24 24">
+                  <path class="ic-accent" d="M3 20h18M5 20V12M9 20V8M13 20V4M17 20V10M21 20V14" />
+                </svg>
+              </div>
+              <h3>AI-Powered Forecasting</h3>
+              <p>Predict revenue with confidence using machine learning models.</p>
+            </div>
+            <div class="flip-back">
+              <h3>Forecasting Details</h3>
+              <ul>
+                <li>ML models trained on your CRM history</li>
+                <li>Deal-level probability scores, updated daily</li>
+                <li>Scenario planning with confidence ranges</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Deal Velocity -->
+        <div class="flip-card reveal reveal-delay-1">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">
+                <svg viewBox="0 0 24 24">
+                  <path class="ic-primary" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <h3>Deal Velocity Signals</h3>
+              <p>Identify bottlenecks and accelerate deal progression in real-time.</p>
+            </div>
+            <div class="flip-back">
+              <h3>Velocity Details</h3>
+              <ul>
+                <li>Stage-by-stage stall detection</li>
+                <li>Engagement drop-off alerts via Slack</li>
+                <li>Benchmarked against your historical velocity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: RevOps Hub -->
+        <div class="flip-card reveal reveal-delay-2">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">
+                <svg viewBox="0 0 24 24">
+                  <circle class="ic-primary" cx="12" cy="5" r="2" />
+                  <circle class="ic-primary" cx="5" cy="19" r="2" />
+                  <circle class="ic-primary" cx="19" cy="19" r="2" />
+                  <path class="ic-accent" d="M12 7v4M12 11L5 17M12 11L19 17" />
+                </svg>
+              </div>
+              <h3>RevOps Intelligence Hub</h3>
+              <p>Unify sales, marketing, and customer data for actionable insights.</p>
+            </div>
+            <div class="flip-back">
+              <h3>Intelligence Details</h3>
+              <ul>
+                <li>Native connectors: Salesforce, HubSpot, Marketo</li>
+                <li>Product usage signals from Segment &amp; Mixpanel</li>
+                <li>One unified view for RevOps &amp; leadership</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="light-section-wrap">
+    
+    <!-- ━━━ PROBLEM ━━━ -->
+    <section class="problem container-sm" id="problem">
+      <div class="problem-inner">
+        <div class="reveal">
+          <div class="section-label">The Problem</div>
+          <h2>Your pipeline data is everywhere. Your confidence is nowhere.</h2>
+          <p>VP Sales and RevOps leaders today are drowning in dashboards. CRM here. Product analytics there. Email engagement somewhere else. Yet every forecast call ends in educated guesses masquerading as certainty.</p>
+          <p>The data exists to know exactly which deals will close. You're just not connecting it.</p>
+        </div>
+        <div class="pain-list">
+          <div class="pain-item reveal reveal-delay-1">
+            <div class="pain-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <div>
+              <h4>Blind Forecast Calls</h4>
+              <p>Reps say "this is solid" with zero signal to back it up. Your board expects accuracy you can't deliver.</p>
+            </div>
+          </div>
+          <div class="pain-item reveal reveal-delay-2">
+            <div class="pain-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <div>
+              <h4>Late-Stage Surprises</h4>
+              <p>Deals go cold with no warning. By the time you notice the signals, it's too late to course-correct.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ━━━ FEATURES ━━━ -->
+    <section class="features" id="features">
+      <div class="container-sm">
+        <div class="features-head reveal">
+          <div class="section-label">The Solution</div>
+          <h2>Everything your revenue team needs to stop guessing</h2>
+          <p>One platform that unifies your data and surfaces the intelligence your reps need every morning.</p>
+        </div>
+        <div class="feature-grid">
+
+          <!-- 1: Pipeline Scoring -->
+          <div class="flip-card-sm reveal">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <div class="fc-sm-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20V10M6 20v-4M18 20V4"/>
+                    <circle cx="12" cy="7" r="1.5" fill="#3B82F6"/>
+                  </svg>
+                </div>
+                <h3>Pipeline Scoring</h3>
+                <p>ML-powered deal scoring trained on your historical close patterns.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Scoring Details</h3>
+                <ul>
+                  <li>Score updates every 24 hours from CRM signals</li>
+                  <li>Weighted model: engagement, timing &amp; fit</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2: Signal Detection -->
+          <div class="flip-card-sm reveal reveal-delay-1">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <div class="fc-sm-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12h2M20 12h2M12 2v2M12 20v2"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <path stroke="#F59E0B" d="M6.3 6.3L7.76 7.76M16.24 16.24L17.7 17.7M17.7 6.3L16.24 7.76M7.76 16.24L6.3 17.7"/>
+                  </svg>
+                </div>
+                <h3>Signal Detection</h3>
+                <p>Surface buying signals from product usage and email engagement.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Signal Details</h3>
+                <ul>
+                  <li>Tracks page views, feature usage &amp; email opens</li>
+                  <li>Configurable signal thresholds per segment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3: Data Unification -->
+          <div class="flip-card-sm reveal reveal-delay-2">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <div class="fc-sm-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                    <path stroke="#F59E0B" d="M17.5 14v7M14 17.5h7"/>
+                  </svg>
+                </div>
+                <h3>Data Unification</h3>
+                <p>Connect CRM, MAP, product analytics in one intelligent view.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Integration Details</h3>
+                <ul>
+                  <li>Native: Salesforce, HubSpot, Segment, Marketo</li>
+                  <li>No-code connector setup, syncs in minutes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4: Revenue Forecasting -->
+          <div class="flip-card-sm reveal">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <div class="fc-sm-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 17l4-4 4 2 4-6 4 4"/>
+                    <path stroke="#F59E0B" d="M3 21h18"/>
+                  </svg>
+                </div>
+                <h3>Revenue Forecasting</h3>
+                <p>Bottom-up forecasting with real engagement data, not gut feel.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Forecasting Details</h3>
+                <ul>
+                  <li>Roll-up views: rep → team → company</li>
+                  <li>Confidence intervals on every forecast</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5: Rep Coaching -->
+          <div class="flip-card-sm reveal reveal-delay-1">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <div class="fc-sm-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="7" r="3"/>
+                    <path d="M5 21v-2a5 5 0 0110 0v2"/>
+                    <path stroke="#F59E0B" d="M17 10l1.5 1.5L21 9"/>
+                  </svg>
+                </div>
+                <h3>Rep Coaching</h3>
+                <p>AI-generated recommendations for every rep, every day.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Coaching Details</h3>
+                <ul>
+                  <li>Daily priority list with action rationale</li>
+                  <li>Nudges via Slack before key deals go stale</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6: Real-Time Alerts -->
+          <div class="flip-card-sm reveal reveal-delay-2">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <div class="fc-sm-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 01-3.46 0"/>
+                    <circle stroke="#F59E0B" fill="#F59E0B" cx="18" cy="5" r="2.5"/>
+                  </svg>
+                </div>
+                <h3>Real-Time Alerts</h3>
+                <p>Instant Slack & email alerts on risk signals and intent spikes.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Alert Details</h3>
+                <ul>
+                  <li>Configurable thresholds per deal stage</li>
+                  <li>Delivered via Slack, email, or in-app</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div> <!-- End Light Section -->
+
+  <!-- ━━━ SOCIAL PROOF ━━━ -->
+  <section class="social-proof" id="social-proof">
+    <div class="container">
+      <div class="sp-inner">
+        <div class="reveal">
+          <div class="section-label section-label-light">Results</div>
+          <h2>The numbers speak for themselves</h2>
+          <p>Revenue teams that use Signalflow don't just forecast better — they close more.</p>
+        </div>
+        <div>
+          <div class="stats-grid">
+            <div class="stat-box reveal"><div class="stat-num" data-target="34%">34%</div><div class="stat-lbl">Increase in win rate</div></div>
+            <div class="stat-box reveal reveal-delay-1"><div class="stat-num" data-target="2.3×">2.3×</div><div class="stat-lbl">Faster deal velocity</div></div>
+            <div class="stat-box reveal reveal-delay-2"><div class="stat-num" data-target="91%">91%</div><div class="stat-lbl">Forecast accuracy</div></div>
+          </div>
+          <div class="testimonial-card-sp reveal reveal-delay-1">
+            <blockquote>"We went from guessing which deals would close to actually knowing. Our forecast accuracy went from 60% to 91% in one quarter. The board finally trusts our numbers."</blockquote>
+            <div class="t-author">
+              <div class="t-avatar">SC</div>
+              <div><div class="t-name">Sarah Chen</div><div class="t-role">VP Revenue Operations · Northwind SaaS</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━ FINAL CTA ━━━ -->
+  <section class="final-cta">
+    <div class="container cta-inner reveal">
+      <div class="cta-tag">
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Ready to see it in action
+      </div>
+      <h2>Stop Losing Deals<br>You Should Have Won</h2>
+      <p>Join 200+ revenue teams using Signalflow to hit their number every quarter. Free trial. Up in minutes.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn-cta-orange">Talk to Sales ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━ FOOTER ━━━ -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">Signalflow</div>
+      <p>© 2026 Signalflow, Inc. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ━━━ DEMO MODAL ━━━ -->
+  <div class="modal-backdrop" id="demoModal" onclick="handleBackdropClick(event)">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+
+      <div id="modalForm">
+        <h2 id="modalTitle">Request a Demo</h2>
+        <p class="modal-sub">We'll set up a personalised walkthrough for your team.</p>
+
+        <div class="modal-row">
+          <div class="modal-field">
+            <label>First Name</label>
+            <input type="text" id="firstName" placeholder="Sarah" autocomplete="given-name">
+          </div>
+          <div class="modal-field">
+            <label>Last Name</label>
+            <input type="text" id="lastName" placeholder="Chen" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="modal-field">
+          <label>Work Email</label>
+          <input type="email" id="email" placeholder="sarah@company.com" autocomplete="email">
+        </div>
+        <div class="modal-field">
+          <label>Company</label>
+          <input type="text" id="company" placeholder="Northwind SaaS" autocomplete="organization">
+        </div>
+        <div class="modal-field">
+          <label>Team Size</label>
+          <select id="teamSize">
+            <option value="" disabled selected>Select range</option>
+            <option>1–10 reps</option>
+            <option>11–50 reps</option>
+            <option>51–200 reps</option>
+            <option>200+ reps</option>
+          </select>
+        </div>
+
+        <button class="modal-submit" onclick="submitDemo()">Book My Demo ↗</button>
+      </div>
+
+      <div class="modal-success" id="modalSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>You're on the list!</h3>
+        <p>Thanks — someone from our team will reach out within one business day to schedule your walkthrough.</p>
+        <p class="success-note">i just submitted for testing. since it's a demo project… Raymond is ignoring this 🙃</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import {
+      animate, stagger, inView, scroll
+    } from 'https://cdn.jsdelivr.net/npm/motion@latest/+esm';
+
+    /* ─── SPRING PRESETS ─── */
+    const SPRING_SNAPPY = { type: 'spring', stiffness: 280, damping: 22 };
+    const SPRING_GENTLE = { type: 'spring', stiffness: 180, damping: 26 };
+    const EASE_OUT     = [0.16, 1, 0.3, 1];
+
+    /* ─── 1. HERO ENTRANCE — stagger on load ─── */
+    const heroSequence = [
+      ['.hero-label',   { opacity: [0,1], y: [16,0] }, { duration: 0.5, easing: EASE_OUT }],
+      ['.hero h1',      { opacity: [0,1], y: [28,0] }, { duration: 0.7, easing: EASE_OUT, at: '-0.35' }],
+      ['.hero-sub',     { opacity: [0,1], y: [20,0] }, { duration: 0.6, easing: EASE_OUT, at: '-0.4' }],
+      ['.hero-actions', { opacity: [0,1], y: [16,0], scale: [0.97,1] }, { duration: 0.5, easing: EASE_OUT, at: '-0.35' }],
+      ['.trust-block',  { opacity: [0,1], y: [12,0] }, { duration: 0.5, easing: EASE_OUT, at: '-0.3' }],
+    ];
+    heroSequence.forEach(([sel, kf, opts]) => {
+      const els = document.querySelectorAll(sel);
+      if (els.length) animate(els, kf, opts);
+    });
+
+    /* ─── 2. NETWORK GRAPH NODES — spring scale-in with stagger ─── */
+    const nodes = document.querySelectorAll('.node-group, .edge-line, .pulse-ring');
+    if (nodes.length) {
+      animate(
+        document.querySelectorAll('.node-group'),
+        { opacity: [0,1], scale: [0.4,1] },
+        { delay: stagger(0.06, { start: 0.4 }), ...SPRING_SNAPPY }
+      );
+      animate(
+        document.querySelectorAll('.edge-line'),
+        { opacity: [0, 0.35] },
+        { delay: stagger(0.04, { start: 0.6 }), duration: 0.4, easing: EASE_OUT }
+      );
+    }
+
+    /* ─── 3. HERO VISUAL — subtle parallax scroll ─── */
+    const heroVisual = document.querySelector('.hero-visual');
+    if (heroVisual) {
+      scroll(({ y }) => {
+        heroVisual.style.transform = `translateY(${y.current * 0.08}px)`;
+      }, { source: document.documentElement });
+    }
+
+    /* ─── 4. OVERLAP FLIP CARDS — stagger spring in ─── */
+    const flipCards = document.querySelectorAll('.flip-card');
+    if (flipCards.length) {
+      animate(flipCards, { opacity: 0, y: 32, scale: 0.96 }, { duration: 0 });
+      inView('.features-overlap', () => {
+        animate(flipCards,
+          { opacity: 1, y: 0, scale: 1 },
+          { delay: stagger(0.08), ...SPRING_GENTLE }
+        );
+      }, { margin: '0px' });
+    }
+
+    /* ─── 5. FEATURE GRID FLIP CARDS — stagger spring in ─── */
+    const flipCardsSm = document.querySelectorAll('.flip-card-sm');
+    if (flipCardsSm.length) {
+      animate(flipCardsSm, { opacity: 0, y: 24, scale: 0.97 }, { duration: 0 });
+      inView('.feature-grid', () => {
+        animate(flipCardsSm,
+          { opacity: 1, y: 0, scale: 1 },
+          { delay: stagger(0.055), ...SPRING_GENTLE }
+        );
+      }, { margin: '0px' });
+    }
+
+    /* ─── 6. SECTION HEADINGS & TEXT BLOCKS ─── */
+    document.querySelectorAll('.features-head, .sp-inner > div:first-child, .cta-inner').forEach(el => {
+      animate(el, { opacity: 0, y: 20 }, { duration: 0 });
+      inView(el, () => {
+        animate(el, { opacity: 1, y: 0 }, { duration: 0.65, easing: EASE_OUT });
+      }, { margin: '0px' });
+    });
+
+    /* ─── 7. SECTION LABEL SLIDE-IN FROM LEFT ─── */
+    document.querySelectorAll('.section-label, .section-label-light').forEach(el => {
+      animate(el, { opacity: 0, x: -16 }, { duration: 0 });
+      inView(el, () => {
+        animate(el, { opacity: 1, x: 0 }, { duration: 0.45, easing: EASE_OUT });
+      }, { margin: '0px' });
+    });
+
+    /* ─── 8. STAT BOXES — spring pop in ─── */
+    const statBoxes = document.querySelectorAll('.stat-box');
+    if (statBoxes.length) {
+      animate(statBoxes, { opacity: 0, y: 20, scale: 0.92 }, { duration: 0 });
+      inView('.stats-grid', () => {
+        animate(statBoxes,
+          { opacity: 1, y: 0, scale: 1 },
+          { delay: stagger(0.1), ...SPRING_SNAPPY }
+        );
+      }, { margin: '0px' });
+    }
+
+    /* ─── 9. TESTIMONIAL CARD — slide up ─── */
+    const testimonial = document.querySelector('.testimonial-card-sp');
+    if (testimonial) {
+      animate(testimonial, { opacity: 0, y: 30 }, { duration: 0 });
+      inView(testimonial, () => {
+        animate(testimonial,
+          { opacity: 1, y: 0 },
+          { duration: 0.7, easing: EASE_OUT }
+        );
+      }, { margin: '0px' });
+    }
+
+    /* ─── 10. PAIN ITEMS — stagger left ─── */
+    const painItems = document.querySelectorAll('.pain-item');
+    if (painItems.length) {
+      animate(painItems, { opacity: 0, x: -20 }, { duration: 0 });
+      inView('.pain-list', () => {
+        animate(painItems,
+          { opacity: 1, x: 0 },
+          { delay: stagger(0.12), duration: 0.55, easing: EASE_OUT }
+        );
+      }, { margin: '-5% 0px' });
+    }
+
+    /* ─── 11. NAV — fade-down on load ─── */
+    animate('nav',
+      { opacity: [0,1], y: [-10,0] },
+      { duration: 0.5, delay: 0.1, easing: EASE_OUT }
+    );
+
+    /* ─── 12. CTA TAG + BUTTON ─── */
+    inView('.final-cta', () => {
+      animate('.cta-tag',       { opacity:[0,1], scale:[0.9,1] }, { duration:0.4, easing:EASE_OUT });
+      animate('.final-cta h2',  { opacity:[0,1], y:[20,0] },     { duration:0.6, easing:EASE_OUT, delay:0.1 });
+      animate('.final-cta > p', { opacity:[0,1], y:[12,0] },     { duration:0.5, easing:EASE_OUT, delay:0.2 });
+      animate('.btn-cta-orange',{ opacity:[0,1], scale:[0.9,1] },{ ...SPRING_SNAPPY, delay:0.3 });
+    }, { margin: '-5% 0px' });
+
+    /* ─── STAT COUNTERS (kept identical) ─── */
+    function animateCounter(el) {
+      const target = el.dataset.target;
+      const isFloat   = target.includes('.');
+      const isPercent = target.endsWith('%');
+      const isX = target.endsWith('×');
+      const raw = parseFloat(target);
+      const duration = 1400;
+      const start = performance.now();
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = raw * eased;
+        if (isFloat)        el.textContent = current.toFixed(1) + (isX ? '×' : '');
+        else if (isPercent) el.textContent = Math.round(current) + '%';
+        else                el.textContent = Math.round(current) + (isX ? '×' : '');
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+    document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+      inView(el, () => animateCounter(el), { margin: '-5% 0px' });
+    });
+
+    /* ─── MODAL ─── */
+    window.openModal = function() {
+      document.getElementById('demoModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      animate('#demoModal .modal', { opacity:[0,1], scale:[0.94,1], y:[16,0] }, { ...SPRING_SNAPPY });
+      setTimeout(() => document.getElementById('firstName').focus(), 50);
+    };
+    window.closeModal = function() {
+      animate('#demoModal .modal', { opacity:[1,0], scale:[1,0.96], y:[0,12] }, { duration:0.2, easing:EASE_OUT })
+        .then(() => {
+          document.getElementById('demoModal').classList.remove('open');
+          document.body.style.overflow = '';
+        });
+    };
+    window.handleBackdropClick = function(e) {
+      if (e.target === document.getElementById('demoModal')) window.closeModal();
+    };
+    window.submitDemo = function() {
+      document.getElementById('modalForm').style.display = 'none';
+      document.getElementById('modalSuccess').style.display = 'block';
+    };
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') window.closeModal(); });
+  </script>
+</body>
+</html>
